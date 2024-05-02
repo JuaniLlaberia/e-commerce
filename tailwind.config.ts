@@ -36,6 +36,7 @@ const config = {
         'border-1': 'var(--border-1)',
         'border-2': 'var(--border-2)',
         special: 'var(--special)',
+        'special-hover': 'var(--special-hover)',
       },
       borderRadius: {
         lg: 'var(--radius)',

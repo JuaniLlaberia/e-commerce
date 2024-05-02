@@ -5,17 +5,17 @@
 @layer base {
   :root {
     /* Backgroundd */
-    --background-1: #f9fcfe;
-    --background-2: #ebf3fc;
+    --background-1: #f4f4fa;
+    --background-2: #fefcff;
     --background-3: #f4f4fb;
     --background-hover-1: #dddbdb1a;
     --background-hover-2: #9493931a;
-    --background-danger: #f87171;
+    --background-danger: #f17e7e;
     --background-overlay: #706e6e1e;
 
     /* Contrast colors */
-    --background-contrast: #1b1a1a;
-    --background-contrast-hover: #2b2929;
+    --background-contrast: #1f2025;
+    --background-contrast-hover: #303135;
     --text-contrast: #fffafa;
 
     /* Texts */
@@ -27,35 +27,37 @@
     /* Extra */
     --border-1: #e5e5e5;
     --border-2: #e5e5e5;
-    --special: #3b82f6;
+    --special: #2563eb;
+    --special-hover: #474e6e1c;
     --radius: 0.5rem;
   }
 
   .dark {
     /* Backgroundd */
-    --background-1: #191919;
-    --background-2: #131212;
-    --background-3: #313030;
+    --background-1: #292b33;
+    --background-2: #1f2025;
+    --background-3: #2d2e31;
     --background-hover-1: #6e6e6e07;
     --background-hover-2: #9493931a;
-    --background-danger: #dc2626;
+    --background-danger: #e03333ef;
     --background-overlay: #706e6e1e;
 
     /* Contrast colors */
-    --background-contrast: #f7f5f2;
+    --background-contrast: #f1efea;
     --background-contrast-hover: #e2e2e2;
     --text-contrast: #1f1c1c;
 
     /* Texts */
-    --text-1: #fffafa;
-    --text-2: #ffffff93;
+    --text-1: #fcf5f5;
+    --text-2: #ffffffa2;
     --text-hover: #ffffff;
     --text-danger: #ef4444;
 
     /* Extra */
     --border-1: #353434;
-    --border-2: #e5e5e5;
-    --special: #3b82f6;
+    --border-2: #323235;
+    --special: #2563eb;
+    --special-hover: #363946a8;
     --radius: 0.5rem;
   }
 }
