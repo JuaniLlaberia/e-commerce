@@ -1,3 +1,4 @@
+import NextTopLoader from 'nextjs-toploader';
 import { Roboto } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
 import { Toaster } from 'sonner';
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={roboto.className}>
+        <NextTopLoader color='#2563eb' showSpinner={false} />
         <ThemeProvider
           attribute='class'
           defaultTheme='system'
@@ -32,10 +34,7 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
-        <Toaster
-          expand
-          richColors
-        />
+        <Toaster expand richColors />
       </body>
     </html>
   );
