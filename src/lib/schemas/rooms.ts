@@ -22,6 +22,6 @@ const roomSchema = new mongoose.Schema(
 
 roomSchema.index({ capacity: 1, type: 1 });
 
-const Room = mongoose.models.User || mongoose.model('Room', roomSchema);
+const Room = mongoose.models.Room || mongoose.model('Room', roomSchema);
 
 export default Room;
