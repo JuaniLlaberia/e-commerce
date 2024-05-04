@@ -17,7 +17,7 @@ const NavLink = ({ label, href, icon, closeFn }: NavLinkProps) => {
 
   return (
     <Link
-      href={href}
+      href={`/admin/${href}`}
       onClick={closeFn}
       className={`flex items-center gap-4 p-2 w-full hover:bg-special-hover rounded-lg transition-colors
         ${

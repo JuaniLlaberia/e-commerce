@@ -11,6 +11,7 @@ import {
   BriefcaseBusiness,
   Users,
   Menu,
+  Bed,
 } from 'lucide-react';
 
 import NavLink from './nav-link';
@@ -19,17 +20,17 @@ import { Button } from '@/components/ui/button';
 const dailyOperations = [
   {
     link: 'front-desk',
-    icon: <ConciergeBell size={22} />,
+    icon: <ConciergeBell size={22} strokeWidth={1} />,
     text: 'Front Desk',
   },
   {
     link: 'bookings',
-    icon: <CalendarRange size={22} />,
+    icon: <CalendarRange size={22} strokeWidth={1} />,
     text: 'Bookings',
   },
   {
     link: 'guests',
-    icon: <Users size={22} />,
+    icon: <Users size={22} strokeWidth={1} />,
     text: 'Guests',
   },
 ];
@@ -37,30 +38,35 @@ const dailyOperations = [
 const sales = [
   {
     link: 'finances',
-    icon: <BarChart3 size={22} />,
+    icon: <BarChart3 size={22} strokeWidth={1} />,
     text: 'Finances',
   },
   {
     link: 'discount',
-    icon: <TicketPercent size={22} />,
+    icon: <TicketPercent size={22} strokeWidth={1} />,
     text: 'Discount',
   },
   {
     link: 'rates',
-    icon: <Tags size={22} />,
+    icon: <Tags size={22} strokeWidth={1} />,
     text: 'Rates',
   },
 ];
 
 const administration = [
   {
+    link: 'rooms',
+    icon: <Bed size={22} strokeWidth={1} />,
+    text: 'Rooms',
+  },
+  {
     link: 'employees',
-    icon: <BriefcaseBusiness size={22} />,
+    icon: <BriefcaseBusiness size={22} strokeWidth={1} />,
     text: 'Employees',
   },
   {
     link: 'settings',
-    icon: <Settings size={22} />,
+    icon: <Settings size={22} strokeWidth={1} />,
     text: 'Settings',
   },
 ];
