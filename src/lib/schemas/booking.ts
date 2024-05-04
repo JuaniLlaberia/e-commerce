@@ -1,52 +1,53 @@
 import mongoose from 'mongoose';
 
-const bookingSchema = new mongoose.Schema(
-  {
-    userId: {
-      type: mongoose.Schema.ObjectId,
-      ref: 'User',
-      required: ['A booking must belong to an user.'],
-    },
-    roomId: {
-      type: mongoose.Schema.ObjectId,
-      ref: 'Room',
-      required: ['A booking must linked to a room.'],
-    },
-    status: {
-      type: String,
-      enum: ['cancelled', 'checked-in', 'checked-out', 'unconfirmed'],
-      default: 'unconfirmed',
-    },
-    dateRange: {
-      type: {
-        startDate: Date,
-        endDate: Date,
-      },
-      required: [true, 'This field is required.'],
-    },
-    totalGuests: {
-      type: Number,
-      required: [true, 'This field is required.'],
-    },
-    totalNights: {
-      type: Number,
-      required: [true, 'This field is required.'],
-    },
-    isPaid: {
-      type: Boolean,
-      default: false,
-    },
-    hasBreakfast: {
-      type: Boolean,
-      default: false,
-    },
-    totalPricec: {
-      type: Number,
-      required: [true, 'This field is required.'],
-    },
+const bookingSchema = new mongoose.Schema({
+  userId: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'User',
+    required: ['A booking must belong to an user.'],
   },
-  { timestamps: true }
-);
+  roomId: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'Room',
+    required: ['A booking must linked to a room.'],
+  },
+  status: {
+    type: String,
+    enum: ['cancelled', 'checked-in', 'checked-out', 'unconfirmed'],
+    default: 'unconfirmed',
+  },
+  dateRange: {
+    type: {
+      startDate: Date,
+      endDate: Date,
+    },
+    required: [true, 'This field is required.'],
+  },
+  totalGuests: {
+    type: Number,
+    required: [true, 'This field is required.'],
+  },
+  totalNights: {
+    type: Number,
+    required: [true, 'This field is required.'],
+  },
+  isPaid: {
+    type: Boolean,
+    default: false,
+  },
+  hasBreakfast: {
+    type: Boolean,
+    default: false,
+  },
+  totalPrice: {
+    type: Number,
+    required: [true, 'This field is required.'],
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now(),
+  },
+});
 
 bookingSchema.index({ userId: 1 });
 bookingSchema.index({ roomId: 1 });
