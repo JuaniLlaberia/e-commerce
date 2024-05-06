@@ -32,6 +32,7 @@ const employeeSchema = new mongoose.Schema(
 );
 
 employeeSchema.index({ email: 1 });
+employeeSchema.index({ email: 'text', fullName: 'text' });
 
 const Employee =
   mongoose.models.Employee || mongoose.model('Employee', employeeSchema);
