@@ -25,7 +25,7 @@ export const getBookings = async ({
     const [sortType, sortVal] = sort.split('-');
 
     if (sortType === 'createdAt')
-      query.sort({ createdAt: sortVal === 'desc' ? -1 : 1 });
+      query.sort({ 'dateRange.startDate': sortVal === 'desc' ? -1 : 1 });
     if (sortType === 'totalPrice')
       query.sort({ totalPrice: sortVal === 'desc' ? -1 : 1 });
   }

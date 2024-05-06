@@ -59,13 +59,13 @@ const BookingsTable = async ({ status, sort, page }: BookingsTableType) => {
         {bookings.length > 0 ? (
           bookings.map(booking => (
             <TableRow key={booking._id}>
-              <TableCell className='flex flex-col gap-0.5'>
+              <TableCell className='flex flex-col gap-0.5 min-w-[200px]'>
                 <span>{booking.guest?.name}</span>
                 <span className='text-sm text-text-2'>
                   {booking.guest?.email}
                 </span>
               </TableCell>
-              <TableCell>
+              <TableCell className='min-w-[250px]'>
                 <span className='flex items-center gap-1.5'>
                   In {formatDistanceToNowStrict(booking.dateRange.startDate)}{' '}
                   <MoveRight size={16} />{' '}
@@ -108,7 +108,10 @@ const BookingsTable = async ({ status, sort, page }: BookingsTableType) => {
           ))
         ) : (
           <TableRow>
-            <TableCell colSpan={10} className='text-center py-9 text-text-2'>
+            <TableCell
+              colSpan={10}
+              className='text-center py-9 text-text-2'
+            >
               No results
             </TableCell>
           </TableRow>
