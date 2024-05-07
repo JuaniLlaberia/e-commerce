@@ -43,6 +43,9 @@ const bookingSchema = new mongoose.Schema({
     type: Number,
     required: [true, 'This field is required.'],
   },
+  observations: {
+    type: String,
+  },
   createdAt: {
     type: Date,
     default: Date.now(),

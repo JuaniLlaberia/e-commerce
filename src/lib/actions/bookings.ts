@@ -43,7 +43,7 @@ export const getBookings = async ({
 export const getBookingById = async (id: string) => {
   if (!id) return notFound();
 
-  const booking = await Booking.findById(id);
+  const booking = await Booking.findById(id).populate('roomId', 'type');
   if (!booking) return notFound();
 
   return booking;
